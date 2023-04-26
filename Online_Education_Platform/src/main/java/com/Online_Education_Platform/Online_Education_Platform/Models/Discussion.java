@@ -20,6 +20,9 @@ public class Discussion {
     @Column(name = "discussion_date")
     String discussion_date;
 
-    @Column(name = "discussion_major")
-    String discussion_major;
+    @Column(name = "discussion_topic")
+    String discussion_topic;
+
+    @ManyToOne
+    private Course course;
 }

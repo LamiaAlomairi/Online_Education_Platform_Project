@@ -17,6 +17,13 @@ public class Payment {
     @Column(name = "payment_id")
     Integer payment_id;
 
-    @Column(name = "payment_account_number")
-    Long payment_account_number;
+    @Column(name = "payment_amount")
+    Double payment_amount;
+
+    @ManyToOne
+    private Student student;
+
+    @ManyToOne
+    private Course course;
+    private String paymentDate;
 }

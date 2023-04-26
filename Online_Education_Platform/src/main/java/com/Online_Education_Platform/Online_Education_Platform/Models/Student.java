@@ -1,9 +1,10 @@
 package com.Online_Education_Platform.Online_Education_Platform.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.*;
 import javax.persistence.*;
 
 @Getter
@@ -22,4 +23,8 @@ public class Student {
 
     @Column(name = "student_age")
     Integer student_age;
+
+    @OneToMany(mappedBy = "student")
+    @JsonIgnore
+    private List<Enrollment> enrollments;
 }

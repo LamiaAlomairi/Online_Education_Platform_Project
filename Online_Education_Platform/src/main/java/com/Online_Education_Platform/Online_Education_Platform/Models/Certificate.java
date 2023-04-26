@@ -20,6 +20,6 @@ public class Certificate {
     @Column(name = "certificate_date")
     String certificate_date;
 
-    @Column(name = "certificate_gpa")
-    Integer certificate_gpa;
+    @OneToOne
+    Enrollment enrollment;
 }

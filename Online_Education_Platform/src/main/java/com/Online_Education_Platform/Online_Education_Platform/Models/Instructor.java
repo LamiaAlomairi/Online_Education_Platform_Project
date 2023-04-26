@@ -1,9 +1,10 @@
 package com.Online_Education_Platform.Online_Education_Platform.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.*;
 import javax.persistence.*;
 
 @Getter
@@ -26,4 +27,8 @@ public class Instructor {
 
     @Column(name = "instructor_phone")
     Integer instructor_phone;
+
+    @ManyToMany
+    @JsonIgnore
+    private List<Course> courses;
 }
