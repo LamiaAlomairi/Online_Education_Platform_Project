@@ -1,4 +1,7 @@
 package com.Online_Education_Platform.Online_Education_Platform.Repositories;
 
-public interface Discussion_Repository {
+import com.Online_Education_Platform.Online_Education_Platform.Models.Discussion;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Discussion_Repository extends JpaRepository<Discussion, Integer> {
 }

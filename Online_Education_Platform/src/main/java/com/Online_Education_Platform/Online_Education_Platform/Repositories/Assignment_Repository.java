@@ -1,4 +1,7 @@
 package com.Online_Education_Platform.Online_Education_Platform.Repositories;
 
-public interface Assignment_Repository {
+import com.Online_Education_Platform.Online_Education_Platform.Models.Assignment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Assignment_Repository extends JpaRepository<Assignment, Integer> {
 }
