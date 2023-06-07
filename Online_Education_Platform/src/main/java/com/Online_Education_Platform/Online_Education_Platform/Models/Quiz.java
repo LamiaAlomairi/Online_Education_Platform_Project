@@ -15,8 +15,7 @@ import javax.persistence.*;
 public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "quiz_number")
-    Integer quiz_number;
+    Integer id;
 
     @ManyToOne
     private Course course;

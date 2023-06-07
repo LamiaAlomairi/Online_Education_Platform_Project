@@ -14,14 +14,9 @@ import javax.persistence.*;
 public class Discussion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "discussion_id")
-    Integer discussion_id;
-
-    @Column(name = "discussion_date")
-    String discussion_date;
-
-    @Column(name = "discussion_topic")
-    String discussion_topic;
+    Integer id;
+    String discussionDate;
+    String discussionTopic;
 
     @ManyToOne
     private Course course;

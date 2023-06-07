@@ -1,23 +1,23 @@
 package com.Online_Education_Platform.Online_Education_Platform.Services;
 
 import com.Online_Education_Platform.Online_Education_Platform.Models.Certificate;
-import com.Online_Education_Platform.Online_Education_Platform.Repositories.Certificate_Repository;
+import com.Online_Education_Platform.Online_Education_Platform.Repositories.CertificateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Certificate_Service {
+public class CertificateService {
     @Autowired
-    Certificate_Repository certificate_repository;
+    CertificateRepository certificateRepository;
     public List<Certificate> getAllCertificates() {
 
-        return certificate_repository.findAll();
+        return certificateRepository.findAll();
     }
 
     public Certificate getCertificateById(Integer id) {
 
-        return certificate_repository.findById(id).get();
+        return certificateRepository.findById(id).get();
     }
 }

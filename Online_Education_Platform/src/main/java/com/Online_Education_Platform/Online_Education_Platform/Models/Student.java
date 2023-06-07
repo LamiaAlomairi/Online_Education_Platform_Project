@@ -15,14 +15,9 @@ import javax.persistence.*;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "student_id")
-    Integer student_id;
-
-    @Column(name = "student_name")
-    String student_name;
-
-    @Column(name = "student_age")
-    Integer student_age;
+    Integer id;
+    String name;
+    Integer age;
 
     @OneToMany(mappedBy = "student")
     @JsonIgnore

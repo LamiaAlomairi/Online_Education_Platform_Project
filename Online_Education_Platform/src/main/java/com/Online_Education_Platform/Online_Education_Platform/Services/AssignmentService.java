@@ -1,22 +1,22 @@
 package com.Online_Education_Platform.Online_Education_Platform.Services;
 
 import com.Online_Education_Platform.Online_Education_Platform.Models.Assignment;
-import com.Online_Education_Platform.Online_Education_Platform.Repositories.Assignment_Repository;
+import com.Online_Education_Platform.Online_Education_Platform.Repositories.AssignmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Assignment_Service {
+public class AssignmentService {
     @Autowired
-    Assignment_Repository assignment_repository;
+    AssignmentRepository assignmentRepository;
     public List<Assignment> getAllAssignments() {
 
-        return assignment_repository.findAll();
+        return assignmentRepository.findAll();
     }
     public Assignment getAssignmentById(Integer id) {
 
-        return assignment_repository.findById(id).get();
+        return assignmentRepository.findById(id).get();
     }
 }

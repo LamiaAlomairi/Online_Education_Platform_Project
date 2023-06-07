@@ -13,10 +13,8 @@ import javax.persistence.*;
 public class Grade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "grade_id")
-    Integer grade_id;
-    @Column(name = "grade_value")
-    Double grade_value;
+    Integer id;
+    Double gradeValue;
 
     @ManyToOne
     private Student student;

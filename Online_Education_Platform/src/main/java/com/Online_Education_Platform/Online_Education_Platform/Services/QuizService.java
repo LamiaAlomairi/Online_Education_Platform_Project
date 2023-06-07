@@ -1,20 +1,20 @@
 package com.Online_Education_Platform.Online_Education_Platform.Services;
 
 import com.Online_Education_Platform.Online_Education_Platform.Models.Quiz;
-import com.Online_Education_Platform.Online_Education_Platform.Repositories.Quiz_Repository;
+import com.Online_Education_Platform.Online_Education_Platform.Repositories.QuizRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
-public class Quiz_Service {
+public class QuizService {
     @Autowired
-    Quiz_Repository quiz_repository;
+    QuizRepository quizRepository;
     public List<Quiz> getAllQuizzes() {
 
-        return quiz_repository.findAll();
+        return quizRepository.findAll();
     }
     public Quiz getQuizById(Integer id) {
 
-        return quiz_repository.findById(id).get();
+        return quizRepository.findById(id).get();
     }
 }

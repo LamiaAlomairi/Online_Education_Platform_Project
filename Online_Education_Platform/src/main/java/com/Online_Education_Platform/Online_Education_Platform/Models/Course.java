@@ -14,11 +14,8 @@ import java.util.*;
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "course_id")
-    Integer course_id;
-
-    @Column(name = "course_name")
-    String course_name;
+    Integer id;
+    String name;
 
     @OneToMany(mappedBy = "course")
     @JsonIgnore

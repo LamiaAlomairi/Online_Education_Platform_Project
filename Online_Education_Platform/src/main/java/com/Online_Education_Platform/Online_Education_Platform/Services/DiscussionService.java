@@ -1,20 +1,20 @@
 package com.Online_Education_Platform.Online_Education_Platform.Services;
 
 import com.Online_Education_Platform.Online_Education_Platform.Models.Discussion;
-import com.Online_Education_Platform.Online_Education_Platform.Repositories.Discussion_Repository;
+import com.Online_Education_Platform.Online_Education_Platform.Repositories.DiscussionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
-public class Discussion_Service {
+public class DiscussionService {
     @Autowired
-    Discussion_Repository discussion_repository;
+    DiscussionRepository discussionRepository;
     public List<Discussion> getAllDiscussions() {
 
-        return discussion_repository.findAll();
+        return discussionRepository.findAll();
     }
     public Discussion getDiscussionById(Integer id) {
 
-        return discussion_repository.findById(id).get();
+        return discussionRepository.findById(id).get();
     }
 }

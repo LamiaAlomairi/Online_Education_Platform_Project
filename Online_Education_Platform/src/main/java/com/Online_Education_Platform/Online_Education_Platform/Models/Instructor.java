@@ -16,17 +16,10 @@ import javax.persistence.*;
 public class Instructor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "instructor_id")
-    Integer instructor_id;
-
-    @Column(name = "instructor_name")
-    String instructor_name;
-
-    @Column(name = "instructor_major")
-    String instructor_major;
-
-    @Column(name = "instructor_phone")
-    Integer instructor_phone;
+    Integer id;
+    String name;
+    String instructorMajor;
+    Integer phone;
 
     @ManyToMany
     @JsonIgnore

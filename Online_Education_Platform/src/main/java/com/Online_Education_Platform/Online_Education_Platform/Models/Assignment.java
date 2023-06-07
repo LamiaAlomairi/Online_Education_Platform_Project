@@ -15,11 +15,8 @@ import javax.persistence.*;
 public class Assignment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "assignment_id")
-    Integer assignment_id;
-
-    @Column(name = "assignment_name")
-    String assignment_name;
+    Integer id;
+    String name;
 
     @ManyToOne
     private Course course;
